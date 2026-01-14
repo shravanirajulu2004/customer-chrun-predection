@@ -1,85 +1,149 @@
-📊 Customer Churn Prediction System
-📌 Project Overview
+# 📊 Customer Churn Prediction & Analysis Dashboard
+## 🔹 Project Overview
 
-This project implements an end-to-end Customer Churn Prediction system using machine learning to identify customers who are likely to leave a service. In addition to prediction, the project focuses on analyzing and visualizing churn drivers to support data-driven business decisions.
+This project focuses on predicting customer churn and analyzing churn behavior using a real-world telecom dataset.
+It demonstrates a complete end-to-end Machine Learning & Analytics workflow:
 
-🎯 Objective
+✅ Data Cleaning & Preprocessing using Python
+✅ Exploratory Data Analysis (EDA)
+✅ Machine Learning using Scikit-learn
+✅ Model Evaluation & Validation
+✅ Data Visualization using Power BI
+✅ Business Insight Generation
 
-Predict customer churn using historical customer data
+The goal is to help businesses:
 
-Understand and explain the key factors contributing to churn
+Identify customers at high risk of churn
 
-Present insights through an interactive business dashboard
+Understand key churn drivers
 
-🛠️ Tech Stack
+Support data-driven customer retention strategies
 
-Python – Data processing and modeling
+## 🔹 Tools & Technologies Used
 
-Pandas & NumPy – Data manipulation
+Data Cleaning & Processing	Python (Pandas, NumPy)
+Machine Learning	Scikit-learn
+Model Evaluation	Classification Metrics
+Data Visualization	Power BI
+Data Files	CSV
+Model Storage	Joblib
 
-Scikit-learn – Machine learning (Logistic Regression, evaluation metrics)
-
-Power BI – Data visualization and dashboarding
-
-📂 Dataset
-
-Source: Telco Customer Churn Dataset (Kaggle)
-
-Each record represents a customer with demographic details, service usage, billing information, and churn status.
-
-⚙️ Project Workflow
-
-Data Loading & Exploration
-
-Loaded customer data and analyzed structure, missing values, and churn distribution.
-
-Data Cleaning & Preprocessing
-
-Handled missing values, converted categorical variables to numerical format, and prepared data for modeling.
-
-Model Building
-
-Trained a Logistic Regression model to predict customer churn.
-
-Split data into training and testing sets.
-
-Model Evaluation
-
-Evaluated model performance using precision, recall, F1-score, and accuracy.
-
-Visualization & Insights
-
-Built an interactive Power BI dashboard to analyze churn patterns and key drivers.
-
-📈 Key Insights
-
-Customers on month-to-month contracts show significantly higher churn.
-
-Higher average monthly charges are associated with increased churn risk.
-
-Long-term contracts help improve customer retention.
-
-📊 Power BI Dashboard
-
-The dashboard includes:
-
-Overall churn distribution
-
-Churn by contract type
-
-Average monthly charges by churn status
-
-Interactive slicers for deeper analysis
-
-📁 Project Structure
+## 🔹 Project Folder Structure
 customer_churn_project/
 │
-├── data/              # Dataset (CSV)
-├── notebooks/         # Jupyter notebooks for analysis and modeling
-├── model/             # Saved trained model
-├── powerbi/           # Power BI dashboard file
+├── data/
+│   └── churn.csv
+│
+├── notebooks/
+│   └── 01_load_and_check_data.ipynb
+│
+├── model/
+│   └── churn_model.pkl
+│
+├── powerbi/
+│   └── churn_dashboard.pbix
+│
 └── README.md
 
-🚀 Conclusion
+## 🔹 Step 1: Data Loading & Exploration (Python)
 
-This project demonstrates a complete data-to-insight pipeline, combining machine learning with business intelligence to address a real-world problem. It highlights how predictive analytics and visualization can work together to support customer retention strategies.
+The Telco Customer Churn dataset was loaded and explored to understand:
+
+Data structure
+
+Column types
+
+Missing values
+
+Churn distribution
+
+Initial checks ensured the dataset was suitable for machine learning.
+
+📄 File Used:
+notebooks/01_load_and_check_data.ipynb
+
+## 🔹 Step 2: Data Cleaning & Preprocessing
+
+The following preprocessing steps were performed using Pandas:
+
+Converted TotalCharges to numeric format
+
+Removed rows with missing values
+
+Encoded the target variable (Churn)
+
+Converted categorical variables using one-hot encoding
+
+This step prepared the dataset for model training.
+
+## 🔹 Step 3: Machine Learning Model (Scikit-learn)
+
+A Logistic Regression model was trained to predict customer churn.
+
+Steps included:
+
+Train-test split (80/20)
+
+Model training using Scikit-learn
+
+Performance evaluation using classification metrics
+
+## 📄 Output:
+model/churn_model.pkl
+
+## 🔹 Step 4: Model Evaluation
+
+The model was evaluated using:
+
+Precision
+
+Recall
+
+F1-score
+
+Accuracy
+
+The results provided a reliable baseline churn prediction model, highlighting areas for future improvement.
+
+## 🔹 Step 5: Power BI Dashboard
+
+An interactive Power BI dashboard was created to visualize churn patterns and customer behavior.
+
+## Dashboard Visuals:
+
+📊 Customer Churn Count
+📑 Churn by Contract Type
+💰 Average Monthly Charges by Churn Status
+🎛️ Interactive slicers for deeper analysis
+
+📁 File:
+powerbi/churn_dashboard.pbix
+
+## 🔹 Key Business Insights
+
+✔️ Customers on month-to-month contracts have the highest churn
+✔️ Higher monthly charges are strongly associated with churn
+✔️ Long-term contracts help improve customer retention
+✔️ Churn insights can guide targeted retention strategies
+
+## 🔹 Skills Demonstrated
+
+✅ Data Cleaning & Preprocessing
+✅ Machine Learning with Scikit-learn
+✅ Model Evaluation & Interpretation
+✅ Power BI Dashboard Design
+✅ Business Insight Generation
+✅ End-to-End Analytics Project
+
+## 🔹 How to Run This Project
+
+1️⃣ Open Jupyter Notebook and run analysis
+
+notebooks/01_load_and_check_data.ipynb
+
+
+2️⃣ Load dataset into Power BI
+
+Open churn_dashboard.pbix
+
+Refresh data if required
